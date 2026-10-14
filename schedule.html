@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Raspored — Nika Pilates Studio</title>
+  <meta name="description" content="Raspored grupnih časova pilatesa na reformeru u studiju Nika u Beogradu. Najviše tri osobe po času.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{if(localStorage.getItem('nika-lang')==='en'){d.lang='en';d.classList.add('i18n-pending');}}catch(e){}})();</script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="schedule">
+  <a class="skip-link" href="#main" data-i18n="common.skip">Preskoči na sadržaj</a>
+
+  <header class="site-header" data-header>
+    <div class="header-bar">
+      <nav class="primary-nav" aria-label="Glavni meni" data-i18n-attr="aria-label:common.navLabel">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+          <li><a href="schedule.html" aria-current="page" data-i18n="nav.schedule">Raspored</a></li>
+          <li><a href="memberships.html" data-i18n="nav.memberships">Članarine</a></li>
+          <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="brand" href="index.html" aria-label="Nika Pilates Studio, početna strana" data-i18n-attr="aria-label:common.homeLabel">
+        <img src="assets/img/logo/nika-mark.svg" width="223" height="100" alt="">
+      </a>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Jezik" data-i18n-attr="aria-label:common.langLabel">
+          <button type="button" data-lang="sr" aria-pressed="true" lang="sr">SR</button>
+          <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="btn btn--outline" href="contact.html#free-class" data-i18n="common.ctaFree">Zakaži besplatan čas</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span class="sr-only" data-menu-label>Otvori meni</span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+        <li><a href="schedule.html" aria-current="page" data-i18n="nav.schedule">Raspored</a></li>
+        <li><a href="memberships.html" data-i18n="nav.memberships">Članarine</a></li>
+        <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+      <a class="btn" href="contact.html#free-class" data-i18n="common.ctaFree">Zakaži besplatan čas</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap narrow center stack">
+        <h1 class="h-xl" data-i18n="schedule.title">Raspored</h1>
+        <p class="lead" data-i18n="schedule.lead">Grupni časovi za najviše tri osobe. Izaberite dan i čas i rezervišite svoj reformer. Rezervacije su otvorene tri nedelje unapred.</p>
+        <span class="rule"></span>
+      </div>
+    </section>
+
+    <section class="band band--sage">
+      <div class="wrap">
+        <!-- When BOOKING_URL is set in assets/js/main.js, this card shows the online booking system instead. -->
+        <div class="sched-card surface-paper" data-booking-host>
+          <div class="sched-top">
+            <h2 class="h-md" data-i18n="schedule.find">Pronađite čas</h2>
+            <label class="select">
+              <span class="sr-only" data-i18n="schedule.classType">Vrsta časa</span>
+              <select id="filter-class"><option value="" data-i18n="schedule.allClasses">Svi časovi</option></select>
+            </label>
+          </div>
+
+          <div class="sched-month">
+            <span data-month></span>
+            <div class="week-nav">
+              <button class="icon-btn" type="button" data-week-prev aria-label="Prethodna nedelja" data-i18n-attr="aria-label:schedule.prevWeek">‹</button>
+              <button class="icon-btn" type="button" data-week-next aria-label="Sledeća nedelja" data-i18n-attr="aria-label:schedule.nextWeek">›</button>
+            </div>
+          </div>
+
+          <div class="day-strip" role="tablist" aria-label="Izaberite dan" data-i18n-attr="aria-label:schedule.chooseDay" data-days></div>
+
+          <div class="sched-day-head">
+            <h3 data-day-title></h3>
+            <span class="note" data-i18n="schedule.localTime">Sva vremena su po lokalnom vremenu studija.</span>
+          </div>
+
+          <ol class="sched-list" data-sched-list aria-live="polite">
+            <li class="sched-empty"><p data-i18n="schedule.noJs">Za prikaz rasporeda potreban je JavaScript. Pozovite ili pišite studiju da zakažete čas.</p></li>
+          </ol>
+
+          <div class="sched-foot">
+            <p class="note" data-i18n="schedule.privateNote">Privatni i duet časovi zakazuju se po dogovoru.</p>
+            <a class="btn btn--outline btn--sm" href="contact.html#private" data-i18n="schedule.privateBtn">Zakaži privatni čas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--ink">
+      <div class="wrap narrow center stack reveal">
+        <span class="rule"></span>
+        <h2 class="h-lg" data-i18n="schedule.ctaTitle">Prvi put na reformeru?</h2>
+        <p class="lead" data-i18n="schedule.ctaText">Počnite Reformer osnovama ili iskoristite besplatan prvi čas. Pre početka ćemo vam pokazati sprave i osnove.</p>
+        <a class="btn" href="contact.html#free-class" data-i18n="common.ctaClaim">Iskoristi besplatan čas</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Nika Pilates Studio, početna strana" data-i18n-attr="aria-label:common.homeLabel">
+          <img src="assets/img/logo/nika-logo-light.svg" width="200" height="114" alt="">
+        </a>
+        <p data-i18n="footer.tagline">Pilates na reformeru u malim grupama, najviše tri osobe po času.</p>
+      </div>
+      <div>
+        <h3 data-i18n="footer.visit">Posetite nas</h3>
+        <address>Luke Ćelovića Trebinjca 18/117<br><span data-i18n="common.city">11000 Beograd</span></address>
+        <ul style="margin-top:12px">
+          <li>+381 00 000 0000</li>
+          <li><a href="mailto:hello@nikapilates.com">hello@nikapilates.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="footer.explore">Istražite</h3>
+        <ul>
+          <li><a href="schedule.html" data-i18n="nav.schedule">Raspored</a></li>
+          <li><a href="memberships.html" data-i18n="nav.memberships">Članarine</a></li>
+          <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="footer.follow">Pratite nas</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Nika Pilates Studio</span>
+        <nav aria-label="Pravne informacije" data-i18n-attr="aria-label:footer.legalLabel">
+          <a href="#" data-i18n="footer.terms">Uslovi korišćenja</a>
+          <a href="#" data-i18n="footer.privacy">Politika privatnosti</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

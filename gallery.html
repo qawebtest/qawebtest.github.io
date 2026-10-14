@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Galerija — Nika Pilates Studio</title>
+  <meta name="description" content="Fotografije iz studija Nika: reformeri, časovi i naš tim.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{if(localStorage.getItem('nika-lang')==='en'){d.lang='en';d.classList.add('i18n-pending');}}catch(e){}})();</script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="gallery">
+  <a class="skip-link" href="#main" data-i18n="common.skip">Preskoči na sadržaj</a>
+
+  <header class="site-header" data-header>
+    <div class="header-bar">
+      <nav class="primary-nav" aria-label="Glavni meni" data-i18n-attr="aria-label:common.navLabel">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+          <li><a href="schedule.html" data-i18n="nav.schedule">Raspored</a></li>
+          <li><a href="memberships.html" data-i18n="nav.memberships">Članarine</a></li>
+          <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+          <li><a href="gallery.html" aria-current="page" data-i18n="nav.gallery">Galerija</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="brand" href="index.html" aria-label="Nika Pilates Studio, početna strana" data-i18n-attr="aria-label:common.homeLabel">
+        <img src="assets/img/logo/nika-mark.svg" width="223" height="100" alt="">
+      </a>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Jezik" data-i18n-attr="aria-label:common.langLabel">
+          <button type="button" data-lang="sr" aria-pressed="true" lang="sr">SR</button>
+          <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="btn btn--outline" href="contact.html#free-class" data-i18n="common.ctaFree">Zakaži besplatan čas</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span class="sr-only" data-menu-label>Otvori meni</span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+        <li><a href="schedule.html" data-i18n="nav.schedule">Raspored</a></li>
+        <li><a href="memberships.html" data-i18n="nav.memberships">Članarine</a></li>
+        <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+        <li><a href="gallery.html" aria-current="page" data-i18n="nav.gallery">Galerija</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+      <a class="btn" href="contact.html#free-class" data-i18n="common.ctaFree">Zakaži besplatan čas</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap narrow center stack">
+        <h1 class="h-xl" data-i18n="gallery.title">Galerija</h1>
+        <p class="lead" data-i18n="gallery.lead">Pogled u studio: reformeri, svetlo i rad na svakom času.</p>
+        <span class="rule"></span>
+      </div>
+    </section>
+
+    <section class="band band--ink">
+      <div class="wrap">
+        <div class="filters" role="group" aria-label="Filtriraj fotografije" data-i18n-attr="aria-label:gallery.filterLabel">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true" data-i18n="gallery.all">Sve</button>
+          <button class="chip" type="button" data-filter="classes" aria-pressed="false" data-i18n="gallery.catClasses">Časovi</button>
+          <button class="chip" type="button" data-filter="studio" aria-pressed="false" data-i18n="gallery.catStudio">Studio</button>
+          <button class="chip" type="button" data-filter="team" aria-pressed="false" data-i18n="gallery.catTeam">Tim</button>
+        </div>
+
+        <!--
+          To add a photo: put a 1200px-wide JPG and a 600px-wide "-sm" copy in
+          assets/img/gallery/, copy a figure below, and change data-full, the img
+          src/srcset/alt, the caption and data-cat (classes, studio or team).
+          "tall" tiles show the whole portrait photo; tiles without it show a crop.
+        -->
+        <div class="gallery-grid" data-gallery>
+          <figure class="g-item tall" data-cat="classes" data-full="assets/img/gallery/nika-guidance.jpg">
+            <button type="button" aria-label="Otvori fotografiju: Vođenje pokreta" data-i18n-attr="aria-label:gallery.open1">
+              <span class="photo"><img src="assets/img/gallery/nika-guidance-sm.jpg" srcset="assets/img/gallery/nika-guidance-sm.jpg 600w, assets/img/gallery/nika-guidance.jpg 1200w" sizes="(max-width: 960px) 50vw, 33vw" width="600" height="900" alt="Dvoje instruktora vodi pokret ruke klijentkinje na reformeru" data-i18n-attr="alt:gallery.alt1" loading="lazy"></span>
+            </button>
+            <figcaption><span data-i18n="gallery.cap1">Vođenje pokreta</span><span data-i18n="gallery.catClasses">Časovi</span></figcaption>
+          </figure>
+
+          <figure class="g-item tall" data-cat="studio" data-full="assets/img/gallery/nika-studio-box.jpg">
+            <button type="button" aria-label="Otvori fotografiju: Ravnoteža na boksu" data-i18n-attr="aria-label:gallery.open2">
+              <span class="photo"><img src="assets/img/gallery/nika-studio-box-sm.jpg" srcset="assets/img/gallery/nika-studio-box-sm.jpg 600w, assets/img/gallery/nika-studio-box.jpg 1200w" sizes="(max-width: 960px) 50vw, 33vw" width="600" height="900" alt="Instruktorka balansira na boksu reformera sa loptom, iza nje recepcija studija" data-i18n-attr="alt:gallery.alt2" loading="lazy"></span>
+            </button>
+            <figcaption><span data-i18n="gallery.cap2">Ravnoteža na boksu</span><span data-i18n="gallery.catStudio">Studio</span></figcaption>
+          </figure>
+
+          <figure class="g-item" data-cat="studio" data-full="assets/img/gallery/nika-kneeling.jpg">
+            <button type="button" aria-label="Otvori fotografiju: Rad na kolenima" data-i18n-attr="aria-label:gallery.open3">
+              <span class="photo" style="--y:42%"><img src="assets/img/gallery/nika-kneeling-sm.jpg" srcset="assets/img/gallery/nika-kneeling-sm.jpg 600w, assets/img/gallery/nika-kneeling.jpg 1200w" sizes="(max-width: 960px) 50vw, 33vw" width="600" height="900" alt="Klijentkinja kleči na reformeru ispod table Pilates Studio NIKA" data-i18n-attr="alt:gallery.alt3" loading="lazy"></span>
+            </button>
+            <figcaption><span data-i18n="gallery.cap3">Rad na kolenima</span><span data-i18n="gallery.catStudio">Studio</span></figcaption>
+          </figure>
+
+          <figure class="g-item" data-cat="studio" data-full="assets/img/gallery/nika-ball.jpg">
+            <button type="button" aria-label="Otvori fotografiju: Mala lopta" data-i18n-attr="aria-label:gallery.open4">
+              <span class="photo" style="--y:34%"><img src="assets/img/gallery/nika-ball-sm.jpg" srcset="assets/img/gallery/nika-ball-sm.jpg 600w, assets/img/gallery/nika-ball.jpg 1200w" sizes="(max-width: 960px) 50vw, 33vw" width="600" height="900" alt="Klijentkinja sa malom pilates loptom stoji između reformera" data-i18n-attr="alt:gallery.alt4" loading="lazy"></span>
+            </button>
+            <figcaption><span data-i18n="gallery.cap4">Mala lopta</span><span data-i18n="gallery.catStudio">Studio</span></figcaption>
+          </figure>
+
+          <figure class="g-item tall" data-cat="classes" data-full="assets/img/gallery/nika-straps.jpg">
+            <button type="button" aria-label="Otvori fotografiju: Rad sa kaiševima" data-i18n-attr="aria-label:gallery.open5">
+              <span class="photo"><img src="assets/img/gallery/nika-straps-sm.jpg" srcset="assets/img/gallery/nika-straps-sm.jpg 600w, assets/img/gallery/nika-straps.jpg 1200w" sizes="(max-width: 960px) 50vw, 33vw" width="600" height="900" alt="Instruktor pomaže klijentkinji koja leži na reformeru i vežba sa kaiševima" data-i18n-attr="alt:gallery.alt5" loading="lazy"></span>
+            </button>
+            <figcaption><span data-i18n="gallery.cap5">Rad sa kaiševima</span><span data-i18n="gallery.catClasses">Časovi</span></figcaption>
+          </figure>
+
+          <figure class="g-item tall" data-cat="team" data-full="assets/img/gallery/nika-team.jpg">
+            <button type="button" aria-label="Otvori fotografiju: Naš tim" data-i18n-attr="aria-label:gallery.open6">
+              <span class="photo"><img src="assets/img/gallery/nika-team-sm.jpg" srcset="assets/img/gallery/nika-team-sm.jpg 600w, assets/img/gallery/nika-team.jpg 1200w" sizes="(max-width: 960px) 50vw, 33vw" width="600" height="900" alt="Dvoje instruktora studija Nika sede na reformeru" data-i18n-attr="alt:gallery.alt6" loading="lazy"></span>
+            </button>
+            <figcaption><span data-i18n="gallery.cap6">Naš tim</span><span data-i18n="gallery.catTeam">Tim</span></figcaption>
+          </figure>
+
+          <figure class="g-item tall wide-on-2" data-cat="classes" data-full="assets/img/gallery/nika-correction.jpg">
+            <button type="button" aria-label="Otvori fotografiju: Pažnja na detalje" data-i18n-attr="aria-label:gallery.open7">
+              <span class="photo" style="--y:38%"><img src="assets/img/gallery/nika-correction-sm.jpg" srcset="assets/img/gallery/nika-correction-sm.jpg 600w, assets/img/gallery/nika-correction.jpg 1200w" sizes="(max-width: 960px) 100vw, 33vw" width="600" height="900" alt="Instruktor koriguje položaj ruke klijentkinje" data-i18n-attr="alt:gallery.alt7" loading="lazy"></span>
+            </button>
+            <figcaption><span data-i18n="gallery.cap7">Pažnja na detalje</span><span data-i18n="gallery.catClasses">Časovi</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--sage">
+      <div class="wrap narrow center stack reveal">
+        <span class="rule"></span>
+        <h2 class="h-lg" data-i18n="gallery.ctaTitle">Dođite da vidite uživo</h2>
+        <p class="lead" data-i18n="gallery.ctaText">Prvi čas je besplatan. Upoznajte tim, probajte reformer i osetite prostor.</p>
+        <a class="btn" href="contact.html#free-class" data-i18n="common.ctaClaim">Iskoristi besplatan čas</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Pregled fotografija" data-i18n-attr="aria-label:gallery.viewer">
+    <div class="lb-inner">
+      <figure class="lb-figure">
+        <img src="" alt="">
+        <figcaption><span data-lb-caption></span><span data-lb-count></span></figcaption>
+      </figure>
+      <button class="lb-btn lb-close" type="button" aria-label="Zatvori pregled" data-i18n-attr="aria-label:gallery.close">×</button>
+      <button class="lb-btn lb-prev" type="button" aria-label="Prethodna fotografija" data-i18n-attr="aria-label:gallery.prev">‹</button>
+      <button class="lb-btn lb-next" type="button" aria-label="Sledeća fotografija" data-i18n-attr="aria-label:gallery.next">›</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Nika Pilates Studio, početna strana" data-i18n-attr="aria-label:common.homeLabel">
+          <img src="assets/img/logo/nika-logo-light.svg" width="200" height="114" alt="">
+        </a>
+        <p data-i18n="footer.tagline">Pilates na reformeru u malim grupama, najviše tri osobe po času.</p>
+      </div>
+      <div>
+        <h3 data-i18n="footer.visit">Posetite nas</h3>
+        <address>Luke Ćelovića Trebinjca 18/117<br><span data-i18n="common.city">11000 Beograd</span></address>
+        <ul style="margin-top:12px">
+          <li>+381 00 000 0000</li>
+          <li><a href="mailto:hello@nikapilates.com">hello@nikapilates.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="footer.explore">Istražite</h3>
+        <ul>
+          <li><a href="schedule.html" data-i18n="nav.schedule">Raspored</a></li>
+          <li><a href="memberships.html" data-i18n="nav.memberships">Članarine</a></li>
+          <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="footer.follow">Pratite nas</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Nika Pilates Studio</span>
+        <nav aria-label="Pravne informacije" data-i18n-attr="aria-label:footer.legalLabel">
+          <a href="#" data-i18n="footer.terms">Uslovi korišćenja</a>
+          <a href="#" data-i18n="footer.privacy">Politika privatnosti</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
